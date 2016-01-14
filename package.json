@@ -1,0 +1,22 @@
+{
+  "name": "npmrc-swap",
+  "version": "0.0.1",
+  "description": "A script to easily change between npmrc files",
+  "main": "swap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jollyra/npmrc-swap.git"
+  },
+  "author": "Nigel Rahkola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jollyra/npmrc-swap/issues"
+  },
+  "homepage": "https://github.com/jollyra/npmrc-swap",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
