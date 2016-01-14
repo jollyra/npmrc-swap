@@ -11,6 +11,18 @@ if(!cmd.config) {
 	process.exit(1);
 }
 
+var dotfiles = path.join(os.homedir(), 'dotfiles');
+var pulse = path.join(dotfiles, '.npmrc_pulse');
+var nigel = path.join(dotfiles, '.npmrc_nigel');
+
 module.exports = function () {
+	if(cmd.config === 'pulse') {
+
+	} else if(cmd.config === 'nigel') {
+
+	} else {
+		console.log('%s doesn\'t exist', cmd.config);
+		process.exit(1);
+	}
 	process.exit();
 }
