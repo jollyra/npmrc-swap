@@ -14,12 +14,19 @@ if(!cmd.config) {
 var dotfiles = path.join(os.homedir(), 'dotfiles');
 var pulse = path.join(dotfiles, '.npmrc_pulse');
 var nigel = path.join(dotfiles, '.npmrc_nigel');
+var npmrc = path.join(os.homedir(), '.npmrc');
 
 module.exports = function () {
 	if(cmd.config === 'pulse') {
-
+		fs.unlinkSync(npmrc);
+		console.log('Deleted old .npmrc');
+		fs.linkSync(pulse, npmrc);
+		console.log('Linked %s', pulse);
 	} else if(cmd.config === 'nigel') {
-
+		fs.unlinkSync(npmrc);
+		console.log('Deleted old .npmrc');
+		fs.linkSync(nigel, npmrc);
+		console.log('Linked %s', nigel);
 	} else {
 		console.log('%s doesn\'t exist', cmd.config);
 		process.exit(1);
